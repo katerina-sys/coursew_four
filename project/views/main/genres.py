@@ -7,7 +7,7 @@ from project.setup.api.parsers import page_parser
 api = Namespace('genres')
 
 
-@api.route('/genres/')
+@api.route('/')
 class GenresView(Resource):
     @api.expect(page_parser)
     @api.marshal_with(genre, as_list=True, code=200, description='OK')

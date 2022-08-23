@@ -8,7 +8,7 @@ from project.setup.api.parsers import page_parser
 api = Namespace('movies')
 
 
-@api.route('/movies/')
+@api.route('/')
 class MoviesView(Resource):
     @api.expect(page_parser)
     @api.marshal_with(movie, as_list=True, code=200, description='OK')

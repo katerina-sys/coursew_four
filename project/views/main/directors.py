@@ -7,7 +7,7 @@ from project.setup.api.parsers import page_parser
 api = Namespace('directors')
 
 
-@api.route('/directors/')
+@api.route('/')
 class DirectorsView(Resource):
     @api.expect(page_parser)
     @api.marshal_with(director, as_list=True, code=200, description='OK')
