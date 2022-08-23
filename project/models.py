@@ -1,5 +1,4 @@
-from marshmallow.fields import Float, Integer
-from sqlalchemy import Column, String, ForeignKey
+from sqlalchemy import Column, String, ForeignKey, Integer, Float
 from sqlalchemy.orm import relationship
 
 from .setup.db import models
